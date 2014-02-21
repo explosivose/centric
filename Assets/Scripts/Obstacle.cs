@@ -13,8 +13,9 @@ public class Obstacle : MonoBehaviour
 	
 	void Start () 
 	{
-		speed = Random.Range(-maxSpeed, maxSpeed);
-		radius = Random.Range(Player.minRadius + 1, Player.maxRadius);
+		speed = Random.Range(maxSpeed/2f, maxSpeed);
+		speed *= Mathf.Sign(Random.value - 0.5f);
+		radius = Random.Range(Player.minRadius + 1, Player.maxRadius + 1);
 	}
 	
 	
