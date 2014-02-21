@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 	/*******************/
 	
 	// Player position is calculated using an angle and a radius
-	private float theta = 0f;			// angle 
+	private float theta = 0f;			// angle in RADIANS
 	private float radius = 1f;
 	private int circle = 2;				// integer value of radius
 	
