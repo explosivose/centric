@@ -114,6 +114,12 @@ public class Player : MonoBehaviour
 		audio.pitch = radius / maxRadius;
 		// volume depends on input (sounds louder when player moves)
 		audio.volume = Mathf.Abs(xIn) + 0.2f;
+		
+		// camera
+		Transform cam = Camera.main.transform;
+		Vector3 camPos = transform.position / 2f;
+		camPos.z = cam.position.z;
+		cam.position = camPos;
 	}
 	
 	// Coroutine for modifying radius over time
