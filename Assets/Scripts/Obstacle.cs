@@ -25,7 +25,7 @@ public class Obstacle : MonoBehaviour
 	/*******************/
 	
 	private float headTheta = 0f;		// the angle for the first body part (RADIANS)
-	private float radius = 1f;			// the radius of the circle to run around on
+	public float radius = 1f;			// the radius of the circle to run around on
 	private float speed = 0f;			// the actual speed used (bound by the maxSpeed)
 	
 	void Start () 
