@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
 		
 		// Modify "move" sound
 		// pitch depends on radius (distance from center)
-		audio.pitch = radius / maxRadius;
+		audio.pitch =1 +  radius / maxRadius;
 		// volume depends on input (sounds louder when player moves)
 		yIn = Input.GetAxis("Vertical");
 		audio.volume = Mathf.Abs(xIn)/2f + Mathf.Abs(yIn)/2f + 0.2f;
@@ -174,10 +174,20 @@ public class Player : MonoBehaviour
 		// Once token has reached the center, increment score and play a sound
 		score++;
 		AudioSource.PlayClipAtPoint(scorePoint, transform.position);
+		Color old = Camera.main.backgroundColor;
+		Camera.main.backgroundColor = Color.Lerp (old, Color.white, 0.1f);
+		//ants.particleSystem.Play();
 		
 		// Spawn a new token after a short time
 		yield return new WaitForSeconds(0.5f);
+		
+		Camera.main.backgroundColor = old;
 		PlaceToken();
+		
+		token.particleSystem.Play();
+		yield return new WaitForSeconds(token.particleSystem.duration);
+		token.particleSystem.Stop();
+		token.particleSystem.time = 0f;
 		
 		scoring = false;
 	}

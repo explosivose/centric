@@ -1,10 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\RedLines\Assets\Scripts\CubeMaster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
     <Files>
-      <File FileName="..\RedLines\Assets\Scripts\Player.cs" Line="34" Column="84" />
-      <File FileName="..\RedLines\Assets\Scripts\LevelGenerator.cs" Line="144" Column="6" />
-      <File FileName="..\RedLines\Assets\Scripts\CubeMaster.cs" Line="176" Column="7" />
+      <File FileName="Assets\Scripts\Player.cs" Line="182" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
